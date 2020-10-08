@@ -51,7 +51,7 @@
 <div class="backdrop is-hidden" data-modal>
     <div class="modal">
         <button class="close" data-modal-close>
-            <svg class="icon" width="30" height="30">
+            <svg class="icon-close" width="30" height="30">
             <use href="./images/icon/sprite.svg#icon-close"></use>
         </svg>
     </button>
@@ -59,25 +59,25 @@
         <b class="form-subs">Оставьте свои данные, мы вам перезвоним</b>
         <div class="form-field">
     <label class="label" for="name">Имя</label>
-    <input class="input-modal" id="name" type="text" name="name" value>
+    <div class="input-icon"><input class="input-modal" id="name" type="text" name="name" placeholder=" ">
     <svg class="icon-modal">
         <use href="./images/icon/sprite.svg#icon-person"></use>
-    </svg>
+    </svg></div>
 </div>
 
     <div class="form-field">
     <label class="label" for="tel">Телефон</label>
-    <input class="input-modal" id="tel" type="tel" name="tel">
+    <div class="input-icon"><input class="input-modal" id="tel" type="tel" name="tel" placeholder=" ">
 <svg class="icon-modal">
     <use href="./images/icon/sprite.svg#icon-tel"></use>
-</svg></div>
+</svg></div></div>
 
     <div class="form-field">
     <label class="label" for="email">Почта</label>
-    <input class="input-modal" id="email" type="email" name="email">
+    <div class="input-icon"><input class="input-modal" id="email" type="email" name="email" placeholder=" ">
 <svg class="icon-modal">
     <use href="./images/icon/sprite.svg#icon-mail"></use>
-</svg></div>
+</svg></div></div>
 
     <div class="form-field">
     <label class="label" for="comment">Комментарий</label>
@@ -85,9 +85,12 @@
 </div>
 
     <div class="form-policy">
-    <input id="policy" type="checkbox">
-    <label class="label-policy" for="policy">Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="#">Условия договора</a></label>
-    </div>
+        <input class="checkbox" id="policy" type="checkbox">
+        <label class="label-policy" for="policy">             
+        <!-- <span class="checkbox-icon"></span> -->
+                Соглашаюсь с рассылкой и принимаю &nbsp;<a class="policy-link" href="#">Условия договора</a></label>
+    
+</div>
 
     <button class="button-modal" type="submit">Отправить</button>
     </form>
@@ -362,15 +365,16 @@
         </div>
 
         <div>
-            <form id="form-footer" class="form">
+            <form id="form-footer" class="form-footer">
                 <b class="newsletter">Подпишитесь на рассылку</b>
-                <input type="email" id="email-footer" name="email">
+                <div class="form-footer subscription">
+                <input type="email" id="email-footer" name="user-email" placeholder="E-mail">
                 <button class="button footer" type="submit">
                     Подписаться
                     <svg class="icon">
                     <use href="./images/icon/sprite.svg#icon-send"></use>
                 </svg>
-            </button>
+            </button></div>
                 
             </form>
         </div>
