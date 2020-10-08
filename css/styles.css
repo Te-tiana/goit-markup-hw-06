@@ -252,9 +252,12 @@ color: var(--primary-white-color);
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 1;
 
+    opacity: 1;
     visibility: visible;
+
+    overflow: auto;
+    z-index: 2;
 
     transition: opacity var(--transition-duration) var(--transition-timing-function);
     background: rgba(0, 0, 0, 0.2);
@@ -287,7 +290,7 @@ visibility: hidden;
 .backdrop.is-hidden .modal {
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%,-50%) scale(0.8);
+    transform: translate(-50%,-50%) scale(0.1);
 
 }
 
@@ -299,21 +302,18 @@ visibility: hidden;
     height: 30px;
 
     padding: 0;
-    border: 0 solid rgba(0, 0, 0, 0.1);
-    outline: none;
+    outline: 0 solid rgba(0, 0, 0, 0.1);
+    /* outline: none; */
 
+    border: 0;
     border-radius: 50%;
     overflow: hidden;
 
 }
 
-.close:focus {
-   outline: var(--accent-color);
-}
-
-.close .icon {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-   }
+/* .close .icon {
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+   } */
 
 /* Section */
 .feature-list,
@@ -818,5 +818,166 @@ margin-right: 10px;
 
 .general-links .icon {
     fill: var(--primary-white-color);
+}
 
-    }
+.newsletter {
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+}
+
+.button.footer {
+    position: relative;
+padding: 10px 28px;
+min-width: 200px;
+
+font-weight: 700;
+line-height: 1.88;
+letter-spacing: 0.06em;
+
+color: var(--primary-white-color);
+background-color: var(--accent-color);
+}
+
+.form .icon {
+    display: inline-block;
+    position: absolute;
+
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    
+    fill: var(--primary-white-color);
+}
+
+input:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+}
+/* .form .button:hover,
+.button:focus,
+.button:active {
+    box-shadow: 0px 3px 1px rgba(255, 255, 255, 0.1), 0px 1px 2px rgba(255, 255, 255, 0.08), 0px 2px 2px rgba(255, 255, 255, 0.12);
+} */
+
+.modal {
+    padding: 40px;
+
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    line-height: 1.17;
+}
+
+.form-modal {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-subs {
+    display: inline-flex;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+
+    color: var(--title-text-color);
+    margin-bottom: 12px;
+
+    
+}
+
+.form-field {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+   
+}
+
+.input-modal {
+        width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(33,33,33,0.2);
+    border-radius: 4px;
+
+    transition: border-color var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
+}
+
+.icon-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+
+    fill: var(--title-text-color);
+}
+
+#comment {
+    resize: none;
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+}
+
+.modal .label {
+    margin-right: auto;
+    margin-bottom: 4px;
+    padding: 0;
+    
+}
+
+.label:hover .input-modal,
+.label:focus .input-modal,
+.input-modal:focus,
+.input-modal:hover,
+.input-modal:active {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+}
+
+.label-policy {
+     margin-left: 7px;
+    
+    padding: 0;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 1.7;
+    
+}
+
+.form-field .placeholder {
+    color: rgba (117, 117, 117, 0.5);
+}
+
+.button-modal {
+    min-width: 200px;
+    border: transparent;
+    border-radius: 4px;
+    padding: 10px 56px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06;
+    text-align: center;
+
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+}
+
+.form-policy {
+    margin-bottom: 30px;
+}
+
+.policy-link {
+    color: var(--accent-color);
+}
